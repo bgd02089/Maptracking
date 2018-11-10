@@ -2,7 +2,6 @@ package maptracking.example.com.maptracking;
 
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -11,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
@@ -170,6 +170,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
+    //@Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    //@Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    //@Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
     // Once the user has granted or denied your permission request, the Activity’s
     // onRequestPermissionsResult method will be called, and the system will pass
     // the results of the ‘grant permission’ dialog, as an int//
@@ -201,5 +216,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return;
             }
         }
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
