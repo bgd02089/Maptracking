@@ -33,7 +33,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
-public class MapsActivity extends FragmentActivity implements OnMap {
+public class MapsActivity extends Activity {
 
     private static final int PERMISSIONS_REQUEST = 100;
 
